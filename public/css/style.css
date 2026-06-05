@@ -1,0 +1,96 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+ul li, ol li{
+    list-style-type: none;
+}
+
+button{
+    cursor: pointer;
+}
+
+a{
+    text-decoration: none;
+}
+
+body{
+    width: 100%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #fff;
+    color: #333;
+}
+.formContainer {
+    padding: 80px 40px;
+    max-width: 375px;
+    width: 100%;
+    margin: 0 auto;
+}
+.formContainer h1{
+    padding-bottom: 20px;
+}
+.empForm{
+    display:inline;
+}
+.formWrapper {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+}
+.formWrapper label {
+    padding-bottom: 10px;
+}
+.formWrapper input {
+    padding: 7px 5px;
+    border-radius: 2px;
+    border-style: none;
+    border: 1px solid #333;
+}
+.formContainer button{
+    width: 100%;
+    padding: 10px;
+    background-color: #333;
+    color: #eee;
+    text-transform: capitalize;
+    border-radius: 4px;
+}
+.dataTable{
+    width: 100%;
+    margin: 20px 0;
+}
+.dataTable td, .dataTable th{
+    text-align: center;
+    padding: 10px 50px;
+} 
+.tableContainer {
+    max-width: 1024px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 40px 0;
+}
+.tableTitle{
+    display: flex;
+    justify-content: space-between;
+}
+.actionImg{
+    width: 28px;
+    height: 28px;
+    margin-inline: 5px;
+}
+.Createbtn{
+    background-color: blue;
+    color: #fff;
+    padding: 5px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+}
+.deleteBtn{
+    border:none;
+    background:none; 
+    padding:0; 
+    cursor:pointer;
+}
