@@ -94,3 +94,22 @@ body{
     padding:0; 
     cursor:pointer;
 }
+.regTitle{
+    text-align: center;
+    margin-bottom: 40px;
+}
+.loginCt{
+    text-align: center;
+    font-size: 14px;
+    padding: 20px 0;
+}
+.logout{
+    margin: 40px 20px;
+}
+.logout .btn.Createbtn {
+    max-width: 120px;
+    width: 100%;
+    background-color: rgb(230, 14, 14);
+    margin-left: auto;
+    padding: 8px 0;
+}

@@ -1,7 +1,7 @@
 @if(session('success'))
-    <script>
-        alert("{{ session('success') }}");
-    </script>
+<script>
+    alert("{{ session('success') }}");
+</script>
 @endif
 
 <!DOCTYPE html>
@@ -15,6 +15,13 @@
 </head>
 
 <body>
+    <form action="{{ route('logout') }}" method="POST">
+        @csrf
+        <div class="logout">
+            <a href="{{ url('/auth/login') }}" type="button" class="btn Createbtn">LogOut</a>
+        </div>
+    </form>
+
     <div class="tableContainer">
         <div class="tableTitle">
             <h1>Employees</h1>
