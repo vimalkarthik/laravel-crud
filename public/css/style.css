@@ -112,4 +112,5 @@ body{
     background-color: rgb(230, 14, 14);
     margin-left: auto;
     padding: 8px 0;
+    border-style: none;
 }

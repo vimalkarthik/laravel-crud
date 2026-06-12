@@ -20,6 +20,12 @@ class AuthController extends Controller
             'email' => $request->email,
             'password' => bcrypt($request->password),
         ]);
+        if (Auth::attempt([
+            'email' => $request->email,
+            'password' => $request->password
+        ])) {
+            return redirect('/employees/read');
+        }
     }
 
     public function login(Request $request)
@@ -38,12 +44,12 @@ class AuthController extends Controller
     }
 
     public function logout(Request $request)
-{
-    Auth::logout();
+    {
+        Auth::logout();
 
-    $request->session()->invalidate();
-    $request->session()->regenerateToken();
+        $request->session()->invalidate();
+        $request->session()->regenerateToken();
 
-    return redirect('/auth/login');
-}
+        return redirect('/auth/login');
+    }
 }
