@@ -27,7 +27,7 @@
             </div>
             <button type="submit">Register</button>
         </form>
-        <p class="loginCt">Already Have an Account! <a href="/auth/login">Log In</a></p>
+        <p class="loginCt">Already Have an Account! <a href="/auth/login">Login</a></p>
     </div>
 </body>
 
