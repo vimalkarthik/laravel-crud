@@ -57,4 +57,10 @@ class EmployeeController extends Controller
 
         return redirect('/employees/read')->with('success', 'Employee deleted successfully');
     }
+
+    public function index(){
+        $employeeDetails = employee::all();
+
+        return response()->json($employeeDetails);
+    }
 }
