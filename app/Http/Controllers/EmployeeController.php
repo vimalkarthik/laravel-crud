@@ -63,4 +63,13 @@ class EmployeeController extends Controller
 
         return response()->json($employeeDetails);
     }
+
+    // public function search($param){
+    //     $search = employee::where('name', $param) ->get();
+    //     return response()->json($search);
+    // }
+
+    public function search($param){
+    return Employee::where('name', 'LIKE', "%$param%")->get();
+    }
 }

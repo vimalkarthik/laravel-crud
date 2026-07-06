@@ -13,3 +13,4 @@ Route::get('/user', function (Request $request) {
 
 Route::get('/countries', [countryController::class, 'index'] );
 Route::get('/employees', [EmployeeController::class, 'index'] );
+Route::get('/employees/search/{param}', [EmployeeController::class, 'search'] );
