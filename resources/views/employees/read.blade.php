@@ -21,7 +21,11 @@
             <button type="submit" class="btn Createbtn">Logout</button>
         </div>
     </form>
-
+    <form action="/employees/search" method="GET" class="textCenter">
+        <input type="text" placeholder="Search Here...." name="search" class="searchField" id="search">
+        <!-- <span class="closeIcon"><img src="{{ asset('/images/cancel.png')}}" alt="Cancel"></span> -->
+         <button id="clearBtn" type="button">Clear</button>
+    </form>
     <div class="tableContainer">
         <div class="tableTitle">
             <h1>Employees</h1>
@@ -29,21 +33,24 @@
         </div>
 
         <table border="1" class="dataTable">
-            <tr>
-                <th>ID</th>
-                <th>Name</th>
-                <th>Employee ID</th>
-                <th>Designation</th>
-                <th>Actions</th>
-            </tr>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Employee ID</th>
+                    <th>Designation</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
 
-            @foreach($employees as $employee)
-            <tr>
-                <td>{{ $employee->id }}</td>
-                <td>{{ $employee->name }}</td>
-                <td>{{ $employee->employeeId }}</td>
-                <td>{{ $employee->designation }}</td>
-                <td>
+            <tbody id="tableBody">
+                @foreach($employees as $employee)
+                <tr>
+                    <td>{{ $employee->id }}</td>
+                    <td>{{ $employee->name }}</td>
+                    <td>{{ $employee->employeeId }}</td>
+                    <td>{{ $employee->designation }}</td>
+                    <td>
                     <a href="{{ url('/employees/'.$employee->id.'/edit') }}"><img src="{{ asset('images/edit.png') }}" alt="Edit" class="actionImg" title="Edit"></a>
                     <form action="{{ url('/employees/'.$employee->id) }}" method="POST" class="empForm">
                         @csrf
@@ -53,11 +60,13 @@
                             <img src="{{ asset('images/delete.png') }}" alt="Delete" class="actionImg" title="Delete">
                         </button>
                     </form>
-                </td>
-            </tr>
-            @endforeach
+                    </td>
+                </tr>
+                @endforeach
+            </tbody>
         </table>
     </div>
+    <script src="{{ asset('js/crud.js')}}"></script>
 </body>
 
 </html>

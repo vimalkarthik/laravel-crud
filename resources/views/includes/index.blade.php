@@ -1,9 +1,12 @@
+
 @extends('layouts.app')
 
 @section('content')
 
 
-<p>Body of Site</p>
+<form action="">
+    <input type="search" placeholder="Search Here...." name="search" class="searchField">
+</form>
 
 
 @endsection
